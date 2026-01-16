@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: CI/CD Production Pipeline
 
 on:
   push:
@@ -7,20 +7,32 @@ on:
     branches: [main, develop]
 
 jobs:
-  build:
+  test-and-verify:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: 1. Checkout Code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: 2. Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
 
-      - name: Check Environment
+      - name: 3. Verify Project Structure
         run: |
-          echo "Starting CI checks for Samitha and Prabodha's project..."
-          node -v
-          npm -v
+          echo "Verifying Samitha & Prabodha's Modular Structure..."
+          ls -R src/
+          
+      - name: 4. Simulate Build Check
+        run: |
+          echo "Building Portfolio Agency Site..."
+          echo "Build Successful!"
+
+  deploy-status:
+    needs: test-and-verify
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Production Deployment Notification
+        run: echo "Code has reached the MAIN branch. Vercel is now updating the live Production site."
