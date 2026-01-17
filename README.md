@@ -13,12 +13,11 @@ A professional, responsive portfolio website for a freelancing agency. This proj
 
 ## Live Deployment
 
-🔗 **Live URL:** [https://portfolio-devops-assignment.vercel.app/]
+🔗 **Live URL:** https://portfolio-devops-assignment.vercel.app/
 
 ## Build Status
 
-[![CI/CD Production Pipeline](https://github.com/samitha01/portfolio-devops-assignment/actions/workflows/ci.yml/badge.svg)](https://github.com/samitha01/portfolio-devops-assignment/actions/workflows/ci.yml)
-
+[![CI Pipeline](https://github.com/samitha01/portfolio-devops-assignment/actions/workflows/ci.yml/badge.svg)](https://github.com/samitha01/portfolio-devops-assignment/actions/workflows/ci.yml)
 [![Deploy to Production](https://github.com/samitha01/portfolio-devops-assignment/actions/workflows/deploy.yml/badge.svg)](https://github.com/samitha01/portfolio-devops-assignment/actions/workflows/deploy.yml)
 
 ## Technologies Used
@@ -36,11 +35,19 @@ A professional, responsive portfolio website for a freelancing agency. This proj
 
 ## Branch Strategy
 
-We implemented a professional Gitflow branching strategy:
+We implemented the following branching strategy as required:
 
-- `main`: Production-ready code (Protected)
-- `develop`: Integration branch for team collaboration
-- `feature/*`: Individual branches for specific feature development
+- `main` - Production branch (Protected)
+- `develop` - Integration branch
+- `feature/*` - Feature development branches
+
+## Merge Conflict Resolution
+
+As seen in our repository history and provided documentation, a conflict occurred in `src/index.html` during a merge between the `develop` and `feature/samitha-title` branches.
+
+- **Conflict:** Both branches modified the `<h1>` heading (Lines 7-11) with different branding titles.
+- **Resolution:** We used the VS Code Merge Editor to "Accept Both Changes" for comparison, then manually finalized the code to use the agreed-upon agency title.
+- **Verification:** The resolved file was committed and verified through our CI pipeline.
 
 ## Individual Contributions
 
@@ -48,8 +55,8 @@ We implemented a professional Gitflow branching strategy:
 
 - Repository initialization and configuration.
 - Implementation of `.github/workflows/ci.yml` and `deploy.yml`.
-- Configuration of Branch Protection Rules and Vercel Deployment.
-- Resolution of merge conflicts during the file structure migration.
+- Configuration of Branch Protection Rules and Vercel Deployment (Secrets: VERCEL_TOKEN, ORG_ID, PROJECT_ID).
+- **Key Commits:** `chore: initial repository setup`, `ci: add CI pipeline workflow`.
 
 ### R.H.M.P.S.RAJASINGHE (Full-Stack Developer)
 
@@ -57,15 +64,14 @@ We implemented a professional Gitflow branching strategy:
 - Implementation of the Light/Dark mode JavaScript logic.
 - Creation and management of feature branches (`feature/contact-form`).
 - Documentation and code review of the final production pull request.
+- **Key Commits:** `feat: add contact form section`, `style: update responsive navigation`.
 
 ## Setup Instructions
-
-### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/samitha01/portfolio-devops-assignment.git
+   git clone [https://github.com/samitha01/portfolio-devops-assignment.git](https://github.com/samitha01/portfolio-devops-assignment.git)
 
    ```
 
