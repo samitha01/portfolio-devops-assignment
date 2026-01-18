@@ -3,61 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam & Prabz | Freelance Agency</title>
+    <title>S&P Digital | DevOps & Web Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="logo">S&P Agency</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button id="theme-toggle">🌓 Toggle Mode</button>
+    <nav class="navbar-container">
+        <div class="nav-island">
+            <div class="logo">S&P<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-box">Home</a></li>
+                <li><a href="#services" class="nav-box">Services</a></li>
+                <li><a href="#projects" class="nav-box">Work</a></li>
+                <li><a href="#contact" class="nav-box">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-pill">🌓</button>
+        </div>
     </nav>
 
-    <header id="home" class="hero-section">
-        <h1>Professional DevOps & Web Solutions</h1>
-        <p>Built by Samitha & Prabodha</p>
-        <a href="#services" class="btn">Explore Our Services</a>
-    </header>
-
-    <section id="services" class="section">
-        <h2>Our Services</h2>
-        <div class="services-container">
-            <div class="card">
-                <h3>Cloud & DevOps</h3>
-                <p>CI/CD pipelines, Docker, and Automated Deployments.</p>
+    <main class="content-wrapper">
+        <header id="home" class="hero-card reveal">
+            <div class="hero-content">
+                <h1>Expert DevOps & <br><span class="gradient-text">Modern Web Solutions</span></h1>
+                <p class="hero-p">Accelerating business with automated pipelines by Samitha and high-performance web applications by Prabodha.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn primary-btn">Explore Expertise</a>
+                    <a href="#contact" class="btn secondary-btn">Start Project</a>
+                </div>
             </div>
-            <div class="card">
-                <h3>Web Development</h3>
-                <p>Responsive and modular website design for businesses.</p>
+        </header>
+
+        <section id="services" class="section reveal">
+            <span class="sub-title">Expertise</span>
+            <h2>Our Core Services</h2>
+            <div class="services-container">
+                <div class="card card-blue">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&q=80&w=300&h=200" alt="DevOps">
+                    </div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Scaling infrastructure with CI/CD and Docker automation.</p>
+                </div>
+                <div class="card card-purple">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=300&h=200" alt="Web Dev">
+                    </div>
+                    <h3>Full-Stack Dev</h3>
+                    <p>Responsive, modular websites built with clean architecture.</p>
+                </div>
+                <div class="card card-indigo">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=300&h=200" alt="Consulting">
+                    </div>
+                    <h3>Tech Strategy</h3>
+                    <p>Digital transformation strategies for growing startups.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="section gray-bg">
-        <h2>Our Projects</h2>
-        <div class="projects-grid">
-            <div class="project-item">Portfolio Automation</div>
-            <div class="project-item">Vercel Deployment</div>
-            <div class="project-item">GitHub Ruleset Config</div>
-        </div>
-    </section>
+        <section id="projects" class="section reveal gray-bg">
+            <span class="sub-title">Portfolio</span>
+            <h2>Recent Projects</h2>
+            <div class="projects-grid">
+                <div class="project-box box-1">
+                    <h4>Pipeline Automation</h4>
+                    <p>GitHub Actions & Vercel</p>
+                </div>
+                <div class="project-box box-2">
+                    <h4>E-Commerce UI</h4>
+                    <p>Modern Responsive Web</p>
+                </div>
+                <div class="project-box box-3">
+                    <h4>Serverless API</h4>
+                    <p>Node.js & Cloud Functions</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <p>Ready to start your DevOps journey? Send us a message!</p>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
+        <section id="contact" class="section reveal">
+            <h2>Start a Project</h2>
+            <p>Designed and Built by:<br> <strong>S&P Team</strong></p>
+            <div class="form-container">
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Describe your project goals..." rows="5" required></textarea>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 S&P Agency. All rights reserved.</p>
+        </footer>
+    </main>
 
     <script src="scripts/script.js"></script>
 </body>
