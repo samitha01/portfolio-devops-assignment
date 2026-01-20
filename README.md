@@ -61,16 +61,19 @@ Also a conflict occurred in src/styles/style.css during a merge between the feat
 
 - Repository initialization and configuration.
 - Implementation of `.github/workflows/ci.yml` and `deploy.yml`.
-- Configuration of Branch Protection Rules and Vercel Deployment (Secrets: VERCEL_TOKEN, ORG_ID, PROJECT_ID).
-- **Key Commits:** `chore: initial repository setup`, `ci: add CI pipeline workflow`.
+- Configuration of Branch Protection Rules and Vercel Deployment
+- Led the Release Management process by merging develop to main.
+- Managed and documented the resolution of complex merge conflicts in CSS and HTML.
+- **Key Commits:** `chore: initial repository setup, ci: add CI pipeline workflow, fix: resolve merge conflict by accepting green branding.`
 
 ### R.H.M.P.S.RAJASINGHE (Full-Stack Developer)
 
 - Development of the modular landing page components.
 - Implementation of the Light/Dark mode JavaScript logic.
 - Creation and management of feature branches (`feature/contact-form`).
-- Documentation and code review of the final production pull request.
-- **Key Commits:** `feat: add contact form section`, `style: update responsive navigation`.
+- Executed a major UI overhaul, implementing a modern card-based layout and floating navigation.
+- Collaborated on cross-branch feature integration and branding experiments.
+- **Key Commits:** `feat: add contact form section, feat: implement modern card-based UI, feat: update brand to green theme.`.
 
 ## Real-World Business Problem solved
 
