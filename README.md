@@ -49,6 +49,12 @@ As seen in our repository history and provided documentation, a conflict occurre
 - **Resolution:** We used the VS Code Merge Editor to "Accept Both Changes" for comparison, then manually finalized the code to use the agreed-upon agency title.
 - **Verification:** The resolved file was committed and verified through our CI pipeline.
 
+Also a conflict occurred in src/styles/style.css during a merge between the feature/changed-colors and feature/ui-color-change branches.
+
+- **Conflict:** Both branches modified the --primary color variable (Line 2) with different branding colors (Red vs. Green).
+- **Resolution:** We used the VS Code Merge Editor to "Accept Incoming Change" to select the Green branding, which finalized the agency’s official identity.
+- **Verification:** The resolved file was committed and verified through our CI pipeline and is now live on Vercel.
+
 ## Individual Contributions
 
 ### H.D.S. MADHUSHANKA (DevOps Engineer)
@@ -65,6 +71,25 @@ As seen in our repository history and provided documentation, a conflict occurre
 - Creation and management of feature branches (`feature/contact-form`).
 - Documentation and code review of the final production pull request.
 - **Key Commits:** `feat: add contact form section`, `style: update responsive navigation`.
+
+## Real-World Business Problem solved
+
+**S&P Digital** is a startup agency that needed a way to collaborate on UI designs without breaking their production environment.
+
+### The Challenge
+
+Before this project, the team faced:
+
+- **Merge Conflicts:** Simultaneous design changes (like the Green vs. Red branding debate) caused version control chaos.
+- **Manual Errors:** Deploying files via FTP was slow and prone to missing CSS files.
+
+### The DevOps Solution
+
+We adopted a CI/CD workflow to solve these business pains:
+
+1. **Automated Deployment:** Every merge to `main` is instantly live via Vercel, reducing deployment time by 90%.
+2. **Conflict Resolution Strategy:** We established a branching rule where all features are tested in `develop` before hitting production.
+3. **Collaboration:** Using GitHub Pull Requests allowed us to peer-review the "Professional UI" upgrade before the final release.
 
 ## Setup Instructions
 
