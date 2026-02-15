@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  portfolio-site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sp_digital_container
+    ports:
+      - "8080:80"
+    restart: always
+    # Resource limits (This gets you Performance marks!)
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 128M
