@@ -119,3 +119,20 @@ Verification Checklist
 [x] CI/CD workflows show green status.
 
 [x] Application is responsive and accessible in incognito mode.
+
+
+## Assignment 2: Docker Containerization
+
+### Container Architecture
+We have containerized the S&P Digital Portfolio using **Nginx (Alpine)** for high performance and low resource footprint.
+
+### How to Run Locally with Docker
+1. Build the image:
+   `docker build -t portfolio-agency .`
+2. Run the container:
+   `docker run -p 8080:80 portfolio-agency`
+3. Access the site at: `http://localhost:8080`
+
+### Technical Decisions (For Report)
+- **Base Image:** `nginx:alpine` chosen for security and small image size (~5MB).
+- **Port Mapping:** Host 8080 mapped to Container 80 to avoid conflicts with local services.
