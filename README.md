@@ -120,19 +120,37 @@ Verification Checklist
 
 [x] Application is responsive and accessible in incognito mode.
 
-
-## Assignment 2: Docker Containerization
+## Assignment 2: Docker Containerization & Security
 
 ### Container Architecture
-We have containerized the S&P Digital Portfolio using **Nginx (Alpine)** for high performance and low resource footprint.
 
-### How to Run Locally with Docker
-1. Build the image:
-   `docker build -t portfolio-agency .`
-2. Run the container:
-   `docker run -p 8080:80 portfolio-agency`
-3. Access the site at: `http://localhost:8080`
+We have implemented a **Multi-stage Docker build** to optimize image size and security.
 
-### Technical Decisions (For Report)
-- **Base Image:** `nginx:alpine` chosen for security and small image size (~5MB).
-- **Port Mapping:** Host 8080 mapped to Container 80 to avoid conflicts with local services.
+- **Stage 1 (Build):** Uses Alpine Linux to prepare source files.
+- **Stage 2 (Production):** Uses Nginx (Alpine) to serve the static portfolio.
+
+### Security & Optimization (Requirements Met)
+
+- **Non-Root User:** The container runs as the `nginx` user (Least Privilege) for enhanced security.
+- **Custom Port:** The application serves on port **8080** internally to comply with non-root requirements.
+- **Health Management:** Includes a Docker `HEALTHCHECK` to ensure the service is responsive.
+
+### How to Run Locally
+
+1. **Build the image:**
+   ```powershell
+   docker build -t s-p-portfolio .
+   Run the container:
+   ```
+
+PowerShell
+docker run -d -p 8080:8080 --name portfolio-final s-p-portfolio
+Verify Health:
+Wait 30 seconds and run docker ps to see the (healthy) status.
+
+Access the site: Open http://localhost:8080 in your browser.
+
+Technical Decisions for Report
+Base Image: nginx:alpine was chosen to minimize the attack surface.
+
+Configuration: A custom nginx.conf was implemented to redirect temporary Nginx folders to /tmp, allowing the process to run without root privileges.
