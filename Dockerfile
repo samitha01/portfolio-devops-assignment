@@ -4,6 +4,8 @@ WORKDIR /app
 COPY src/ ./src/
 # This stage just ensures our source is ready
 
+RUN sed -i 's/listen\(.*\)80;/listen 8080;/' /etc/nginx/conf.d/default.conf
+
 # STAGE 2: Production Server
 FROM nginx:alpine
 # Set a non-root user for security (Important for marks!)
